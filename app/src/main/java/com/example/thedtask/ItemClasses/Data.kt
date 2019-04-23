@@ -1,4 +1,4 @@
-package com.example.thedtask
+package com.example.thedtask.ItemClasses
 
 import com.google.gson.annotations.SerializedName
 

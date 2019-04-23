@@ -14,6 +14,10 @@ import androidx.swiperefreshlayout.widget.SwipeRefreshLayout
 import com.androidnetworking.AndroidNetworking
 import com.androidnetworking.error.ANError
 import com.androidnetworking.interfaces.ParsedRequestListener
+import com.example.thedtask.ItemClasses.Data
+import com.example.thedtask.ItemClasses.ItemDetails
+import com.example.thedtask.Room.AppDB
+import com.example.thedtask.Room.Item_Entity
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -38,7 +42,7 @@ class MainActivity : AppCompatActivity() {
 
 
         //database instance
-        var db = Room.databaseBuilder(applicationContext,AppDB::class.java,"itemDB").build()
+        var db = Room.databaseBuilder(applicationContext, AppDB::class.java,"itemDB").build()
 
 
         fun task() {

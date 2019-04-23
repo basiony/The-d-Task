@@ -9,6 +9,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat.startActivity
 import androidx.recyclerview.widget.RecyclerView
+import com.example.thedtask.ItemClasses.Data
 import com.squareup.picasso.Picasso
 import kotlinx.android.synthetic.main.layout_itemlist.view.*
 
@@ -19,7 +20,7 @@ class ItemsAdapter(private val datalist:MutableList<Data>): RecyclerView.Adapter
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemViewHolder {
         context = parent.context
         return ItemViewHolder(
-            LayoutInflater.from(parent.context).inflate(R.layout.layout_itemlist,parent,false )
+            LayoutInflater.from(parent.context).inflate(R.layout.layout_itemlist, parent, false)
         )
     }
 
@@ -50,7 +51,7 @@ class ItemsAdapter(private val datalist:MutableList<Data>): RecyclerView.Adapter
 
         holder.view.setOnClickListener{
 
-            val intent = Intent(context,Description::class.java)
+            val intent = Intent(context, Description::class.java)
             intent.putExtra("itemDescription",descr.toString())
             intent.putExtra("itemImage",img)
             startActivity(context,intent, Bundle())
