@@ -166,6 +166,7 @@ class MainActivity : AppCompatActivity() {
         refresh.setOnRefreshListener {
             Handler(Looper.getMainLooper()).postDelayed(
                 {
+                    itemList.removeAll { true }
                     task()
                     myAdapter.notifyDataSetChanged()
                     refresh.isRefreshing=false
